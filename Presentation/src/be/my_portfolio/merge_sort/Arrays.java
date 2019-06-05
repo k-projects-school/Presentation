@@ -1,6 +1,16 @@
 package be.my_portfolio.merge_sort;
 
-public class MergeSort {
+public class Arrays {
+
+	/**
+	 * The callable merge sort method.
+	 * 
+	 * @param array
+	 */
+	public static void mergeSort(int[] array) {
+		mergeSort(array, 0, array.length-1);
+	}
+	
 	/**
 	 * Merge sorts an array.
 	 * 
@@ -8,7 +18,7 @@ public class MergeSort {
 	 * @param left
 	 * @param right
 	 */
-	public void mergeSort(int[] array, int left, int right) {
+	private static void mergeSort(int[] array, int left, int right) {
 
 		if (left < right) {
 			// Get the middle point
@@ -31,7 +41,7 @@ public class MergeSort {
 	 * @param median
 	 * @param right
 	 */
-	public void merge(int[] array, int left, int median, int right) {
+	private static void merge(int[] array, int left, int median, int right) {
 		// Get the sizes of the two subarrays that has to be created
 		// sizeLeft is the left size
 		int sizeLeft = median - left + 1;
